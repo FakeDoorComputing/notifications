@@ -48,6 +48,15 @@ function dialogDismissed(buttonIndex) {
 
 	if(buttonIndex==1) new Toast({content: "Take a break and eat a plate of Human Hands, Sir?", duration: 3000});
    	else if(buttonIndex==2) new Toast({content: 'Very good, Sir, carry on working', duration: 3000});
+		var currentTime = new Date().getTime(); //current time
+    var notificationTime = new Date(currentTime + 30000); //delayed time  - add 1 second
+		cordova.plugins.notification.local.schedule({
+			id: 		1,
+				title: 		"Hey you",
+				message: 	"Get back to work swiftly once you have eaten",
+				date: 		notificationTime,
+				badge: 		notification_count++
+		});
 }
 
 
@@ -58,7 +67,7 @@ function createNotification() {
     //generate a time to post notification
     //
     var currentTime = new Date().getTime(); //current time
-    var notificationTime = new Date(currentTime + 30000); //delayed time  - add 1 second
+    var notificationTime = new Date(currentTime + 5000); //delayed time  - add 1 second
 
     //
     //setup notification
@@ -66,8 +75,8 @@ function createNotification() {
 
     cordova.plugins.notification.local.schedule({
     	id: 		1,
-        title: 		"Hey you",
-        message: 	"Get back to work swiftly once you have eaten",
+        title: 		"Weyland-Utani",
+        message: 	"Building Better Worlds",
         date: 		notificationTime,
         badge: 		notification_count++
    	});
