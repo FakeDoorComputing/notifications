@@ -80,7 +80,7 @@ function createNotification() {
     	id: 		1,
         title: 		"Weyland-Utani",
         message: 	"Building Better Worlds",
-	icon: 'http://climberindonesia.com/assets/icon/ionicons-2.0.1/png/512/android-chat.png',
+				icon: 'file://res/android-chat.png',
         date: 		notificationTime,
         badge: 		notification_count++
    	});
