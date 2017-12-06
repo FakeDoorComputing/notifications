@@ -78,8 +78,8 @@ function createNotification() {
 
     cordova.plugins.notification.local.schedule({
     	id: 		1,
-        title: 		"Weyland-Utani",
-        message: 	"Building Better Worlds",
+        title: 		"ALERT!",
+        message: 	"Your Front Door Is Currently Unlocked",
 				icon: 'http://climberindonesia.com/assets/icon/ionicons-2.0.1/png/512/android-chat.png',
         date: 		notificationTime,
         badge: 		notification_count++
